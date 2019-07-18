@@ -13,9 +13,9 @@ app.get('/', function(req, res) {
 
 //Whenever someone connects, this gets executed
 io.on('connection', function(socket) {
-    // setTimeout(function() {
-    //     socket.emit('testdisplay', 'Grp JCZ');
-    // },2000);
+    setTimeout(function() {
+        socket.emit('testdisplay', 'Socket test');
+    },2000);
     
     //Send a message after a timeout of 2 seconds
     socket.on('clientEvent', function(data) {
