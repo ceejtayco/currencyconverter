@@ -4,11 +4,12 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var fetch = require('node-fetch');
 
-
 app.use(express.static('public'));
+
 
 //Whenever someone connects, this gets executed
 io.on('connection', function(socket) {
+    console.log('A user is connected.');
     setTimeout(function() {
         socket.emit('testdisplay', 'Socket test');
     },2000);
@@ -30,11 +31,15 @@ io.on('connection', function(socket) {
     });
     
     //Whenever someone disconnects, this get executed
+
     socket.on('disconnect', function() {
+        
         console.log('A user disconnected.');
+       
     });
 });
 
-app.listen(3000, function() {
+http.listen(3000, function() {
    console.log('listening on localhost:3000');
+  
 });

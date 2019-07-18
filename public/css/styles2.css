@@ -1,0 +1,97 @@
+
+#currency-converter-container {
+    
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 5rem;
+}
+
+h1.card-title {
+    padding-top: .8rem;
+}
+
+#submit-button {
+    display: block;
+    margin: auto;
+    padding: auto;
+    width: 100%;
+}
+
+#product-table {
+    width: 100%;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 0;
+}
+
+.card-header {
+    background-color: black;
+    color: white;
+}
+
+.card-body {
+    padding: 3rem 1rem 3rem 1rem;
+}
+
+
+#currency-from, #currency-amount, #currency-to, #currency-result {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#currency-from, #currency-to {
+    background-color: black;
+    color: white;
+}
+
+h1.display-4.text-dark {
+    font-weight: bold;
+    text-align: left;
+}
+
+#col-label-from {
+    padding-right: 0;
+    margin-right: 0;
+    padding-top: 1rem;
+}
+#col-text-from {
+    padding-left: 0;
+    margin-left: 0;
+    padding-top: 1rem;
+    border-radius: 0;
+}
+
+#col-equals-sign {
+    padding-top: .3rem;
+}
+
+#col-label-to {
+    padding-right: 0;
+    margin-right: 0;
+    padding-top: 1rem;
+}
+
+#col-text-to {
+    padding-left: 0;
+    margin-left: 0;
+    padding-top: 1rem;
+    border-radius: 0;
+}
+
+#test-web-socket {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#currency-converter-row {
+    margin-top: 5rem;
+}
