@@ -5,12 +5,7 @@ var io = require('socket.io')(http);
 var fetch = require('node-fetch');
 var path  = require('path');
 
-
-app.get('/', function(req, res) {
-   res.sendfile('public/index.html');   
-});
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static('public'));
 
 //Whenever someone connects, this gets executed
 io.on('connection', function(socket) {
@@ -40,6 +35,6 @@ io.on('connection', function(socket) {
     });
 });
 
-http.listen(3000, function() {
+app.listen(3000, function() {
    console.log('listening on localhost:3000');
 });
