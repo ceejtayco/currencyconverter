@@ -5,10 +5,11 @@ var io = require('socket.io')(http);
 var fetch = require('node-fetch');
 var path  = require('path');
 
-app.use(express.static(path.join(__dirname, 'public/css')));
+
 app.get('/', function(req, res) {
-   res.sendfile('index.html');   
+   res.sendfile('public/index.html');   
 });
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 //Whenever someone connects, this gets executed
