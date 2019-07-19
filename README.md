@@ -9,12 +9,17 @@ Lab Exam 2 - Socket Programming
 #install nodemon globally
 npm install -g nodemon
 
-#github configuration
+#Cloning
+# git clone https://github.com/ceejtayco/currencyconverter.git
 
-# git config --global user.name "Ceej Tayco"
-# git config --global user.email "caitlynjules_tayco@umindanao.edu.ph"
+#initializing local repository
+# git init
 
-git add .
-git commit -m "Commit Message"
+#adding remote
+# git remote add origin https://github.com/ceejtayco/currencyconverter.git
 
-git push origin master
+#pulling from repository
+# git pull origin master
+
+#pushing to repository
+# git push origin master
