@@ -5,14 +5,15 @@ var io = require('socket.io')(http);
 var fetch = require('node-fetch');
 
 app.use(express.static('public'));
-
+var connectCounter = 0;
 
 //Whenever someone connects, this gets executed
 io.on('connection', function(socket) {
     console.log('A user is connected.');
-    setTimeout(function() {
-        socket.emit('testdisplay', 'Socket test');
-    },2000);
+    console.log("Number of clients: " + connectCounter++);
+
+    socket.emit('testdisplay', 'Client # ' + connectCounter);
+    
     
     //Send a message after a timeout of 2 seconds
     socket.on('clientEvent', function(data) {
@@ -35,7 +36,7 @@ io.on('connection', function(socket) {
     socket.on('disconnect', function() {
         
         console.log('A user disconnected.');
-       
+        console.log("Number of clients:" + connectCounter--);
     });
 });
 
