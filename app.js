@@ -9,11 +9,11 @@ var connectCounter = 0;
 
 //Whenever someone connects, this gets executed
 io.on('connection', function(socket) {
+    connectCounter++;   
     console.log('A user is connected.');
-    console.log("Number of clients: " + connectCounter++);
+    console.log("Number of clients: " + connectCounter);
 
     socket.emit('testdisplay', 'Client # ' + connectCounter);
-    
     
     //Send a message after a timeout of 2 seconds
     socket.on('clientEvent', function(data) {
@@ -34,9 +34,9 @@ io.on('connection', function(socket) {
     //Whenever someone disconnects, this get executed
 
     socket.on('disconnect', function() {
-        
+        connectCounter--;
         console.log('A user disconnected.');
-        console.log("Number of clients:" + connectCounter--);
+        console.log("Number of clients:" + connectCounter);
     });
 });
 

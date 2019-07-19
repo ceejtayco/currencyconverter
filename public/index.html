@@ -401,14 +401,10 @@
         $source.addEventListener('input', typeHandler);
         $source.addEventListener('propertychange', typeHandler);
     });
-
-        socket.on('message', function(data){
-            document.getElementById('socket-test-display').textContent = data;
-        });
         socket.on('testdisplay', function(data) {
                 document.getElementById('socket-test-display').textContent = data;
                 console.log(data);
-            });
+        });
         
         function convert() {
             var from = document.getElementById("currency-from").value;
